@@ -3,8 +3,13 @@ const sequelize = require('./config/database');
 const voluntariosRoutes = require('./routes/voluntarios');
 const proyectosRoutes = require('./routes/proyectos');
 const asignacionesRoutes = require('./routes/asignaciones');
+const cors =require('cors')
 
 const app = express();
+app.use(cors({
+    origin: 'http://localhost:4200' 
+  }));
+  
 app.use(express.json());  
 
 app.use('/api/voluntarios', voluntariosRoutes);
