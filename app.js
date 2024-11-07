@@ -7,7 +7,7 @@ const cors =require('cors')
 
 const app = express();
 app.use(cors({
-    origin: 'http://localhost:4200' 
+    origin: 'http://52.70.189.53' 
   }));
   
 app.use(express.json());  
